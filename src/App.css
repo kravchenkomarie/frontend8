@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.header,
+.footer,
+.main {
+  align-items: center;
+  display: flex;
+  min-width: 30rem;
+  min-height: 4rem;
+  justify-content: center;
+}
+
+.header {
+  background-color: rgb(255, 98, 234);
+  color: white;
+}
+
+.footer {
+  background-color: rgb(163, 212, 255);
+  color: rgb(39, 39, 39);
+}
+
+.header__item,
+.footer__item {
+  margin: 0 2rem;
+}
+
+.main {
+  background-color: rgb(220, 220, 220);
+}
+
+.main__item {
+  margin: 2rem;
+  color: rgb(255, 98, 234);
+  font-style: italic;
+}
+
+.banana {
+  color: yellow;
+}
