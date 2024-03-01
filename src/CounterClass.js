@@ -5,10 +5,10 @@ export default class CounterClass extends Component {
     counter: 0,
     text: '',
   };
-  
+
   increaseCounter = () => {
     this.setState({
-      counter: this.state.counter + 1,
+      counter: this.state.counter + 1, // переписываем переменную каждый раз
     });
   };
 
@@ -17,6 +17,36 @@ export default class CounterClass extends Component {
       text: event.target.value,
     });
   };
+
+  componentDidMount() {
+    //когда компонент появляется в доме
+    //использовать для операций, которыеочень влияют на память и внутренние ресурсы
+    //например, таймер
+    //идеальный момент, где можно подтянуть информацию с бэка
+    console.log('я родился');
+    // this.timerID = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    //когда компонент уходит из дома
+    //закрыть модальное оно, например
+    console.log('я ушел');
+    clearInterval(this.timerID);
+  }
+
+  // tick() {
+  //   this.setState({
+  //     date
+  //   });
+  // }
+
+  componentDidUpdate() {
+    // вызывается после того, как отработала функция render в каждом цикле перерисовки
+  }
+
+  componentDidCatch() {
+    // отлавливает ошибки в дочернем компоненте
+  }
 
   render() {
     return (
