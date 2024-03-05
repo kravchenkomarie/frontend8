@@ -21,6 +21,11 @@ export default function ToDoList() {
       {list.map((item) => (
         <ListElement item={item} deleteItem={deleteItem}></ListElement>
       ))}
+      <input
+        type='text'
+        onInput={(event) => console.log(event.target.value)}
+      ></input>
+      <button>Добаваить дело</button>
     </div>
   );
 }
