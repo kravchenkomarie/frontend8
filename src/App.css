@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.checked {
+  text-decoration: line-through;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.listElement {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border: 0;
+  background-color: rgb(255, 170, 239);
+  border-radius: 5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0 0.56rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoList {
+  margin: 2rem;
+}
+
+.input {
+  height: 0.5rem;
+  width: 9rem;
+  padding: 0.7rem;
+  border: 1px solid rgb(186, 151, 255);
+  border-radius: 4px;
+  margin: 0.3rem;
+}
+
+.checkbox {
+  height: 1rem;
+  width: 2rem;
+  margin: 0;
+}
+
+.addTaskButton {
+  width: 9rem;
 }
