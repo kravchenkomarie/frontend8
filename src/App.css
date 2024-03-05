@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.listElement {
+  display: flex;
+  margin: 1rem 0;
+}
+
+button {
+  border: 0;
+  background-color: rgb(255, 170, 239);
+  border-radius: 5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0 0.56rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.todoList {
+  margin: 2rem;
+}
+
+.input {
+  height: 0.5rem;
+  width: 9rem;
+  padding: 0.7rem;
+  border: 1px solid rgb(186, 151, 255);
+  border-radius: 4px;
+  margin: 0.3rem;
+}
+
+.checkbox {
+  height: 1rem;
+  width: 2rem;
+  margin: 0;
+}
+
+.addTaskButton {
+  width: 9rem;
+}
