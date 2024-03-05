@@ -46,7 +46,7 @@ export default function Modal({
           required
         ></input>
         <button className='modalButton' onClick={addNewStore}>
-          Добаввить магазин
+          Добавить магазин
         </button>
         <button className='modalButton' onClick={handleModalClose}>
           x
