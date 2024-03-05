@@ -16,27 +16,51 @@ export default function Main() {
   const [storeData, setStoreData] = useState(data);
   const [newStore, setNewStore] = useState(store);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [nameFilter, setNameFilter] = useState('');
+  const [timeFilter, setTimeFilter] = useState('');
+  const [deliveryFilter, setDeliveryFilter] = useState('');
+  const [paymentFilter, setPaymentFilter] = useState('');
 
   const addNewStore = () => {
     setStoreData([...storeData, newStore]);
+    setIsModalOpen(false);
   };
 
   const openModal = () => {
-    setIsModalOpen(true);
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <div>
-      <Filters />
-      <button onClick={openModal}>Добавить магазин</button>
+      <Filters
+        setTimeFilter={setTimeFilter}
+        setNameFilter={setNameFilter}
+        setDeliveryFilter={setDeliveryFilter}
+        setPaymentFilter={setPaymentFilter}
+      />
+      <button className='addButton' onClick={openModal}>
+        Добавить магазин
+      </button>
       {isModalOpen && (
         <Modal
           addNewStore={addNewStore}
           newStore={newStore}
           setNewStore={setNewStore}
+          handleModalClose={handleModalClose}
         />
       )}
-      <TableStore storeData={storeData} newStore={newStore} />
+      <TableStore
+        storeData={storeData}
+        newStore={newStore}
+        timeFilter={timeFilter}
+        nameFilter={nameFilter}
+        deliveryFilter={deliveryFilter}
+        paymentFilter={paymentFilter}
+      />
     </div>
   );
 }
